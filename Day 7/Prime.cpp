@@ -2,30 +2,23 @@
 using namespace std;
 
 bool IsPrime(int n) {
-    if (n <= 1) {
+    if (n == 1) {
         return false;
     }
-
-    for (int i = 2; i <= n - 1; i++) {
-        if (n % i == 0) {
+    
+    for (int i = 2; i <= n-1; i++) {
+        if (n%i == 0) {
             return false;
         }
-    }
-    return true;
-}
-
-void AllPrimes(int n) {
-    for (int i = 2; i <= n; i++) {
-        if (IsPrime(i)) {
-            cout << i << " ";
+        else {
+            return true;
         }
     }
-    cout << endl;
 }
 
 int main() {
     int n;
-    cout << "Enter n: ";
+    cout << "Enter n to check prime or not: ";
     cin >> n;
 
     if (IsPrime(n)) {
@@ -33,9 +26,6 @@ int main() {
     } else {
         cout << n << " is not a prime number." << endl;
     }
-
-    cout << "All prime numbers up to " << n << ": ";
-    AllPrimes(n);
 
     return 0;
 }
