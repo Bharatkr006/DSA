@@ -14,6 +14,6 @@ int main () {
         dec *= 10;
         n = n / 2;
     }
-    cout << ans;
+    cout <<"The Binary number is : " << ans;
     return 0;
 }
